@@ -146,6 +146,20 @@ public class LinkedList<T> implements Iterable<T> {
 		first = internalReverse(null, first);
 	}
 
+	public void reverseIterative() {
+		Node<T> a = first;
+		Node<T> prev = null;
+		while (a != null) {
+			Node<T> next = a.getNext();
+			a.setNext(prev);
+			prev = a;
+			a = next;
+		}
+		Node<T> temp = last;
+		last = first;
+		first = temp;
+	}
+
 	public int size() {
 		return size;
 	}

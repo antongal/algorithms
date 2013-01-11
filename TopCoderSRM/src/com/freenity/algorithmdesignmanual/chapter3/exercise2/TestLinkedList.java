@@ -73,4 +73,19 @@ public class TestLinkedList {
 		assertEquals(2, list.get(1).intValue());
 		assertEquals(1, list.get(2).intValue());
 	}
+	
+	@Test
+	public void testReverseIterative() {
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		
+		list.reverseIterative();
+		
+		assertEquals(3, list.size());
+		assertEquals(3, list.get(0).intValue());
+		assertEquals(2, list.get(1).intValue());
+		assertEquals(1, list.get(2).intValue());
+	}
 }
